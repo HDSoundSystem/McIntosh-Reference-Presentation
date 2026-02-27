@@ -1,8 +1,8 @@
 {
-  "name": "Audio Players Collection",
-  "short_name": "Audio Players Collection",
-  "description": "Select your Audio Player",
-  "start_url": "https://hdsoundsystem.github.io/Player-Collection/",
+  "name": "McIntosh Reference Presentation",
+  "short_name": "McIntosh Reference Presentation",
+  "description": "McIntosh Reference Presentation",
+  "start_url": "https://hdsoundsystem.github.io/McIntosh-Reference-Presentation/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
