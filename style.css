@@ -1,0 +1,270 @@
+/* ===========================
+   Variables CSS Globales
+   =========================== */
+:root {
+    --release-number: "3.0";
+    --font-size-base: 32px;
+    --logo-width: 400px;
+    --gold: #786b46;
+    --font-size-line: 30px;
+    --mcintosh-blue: #00c3ff;
+}
+
+/* ===========================
+   Reset et Configuration de Base
+   =========================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    background-image: radial-gradient(circle at center, rgba(172, 171, 171, 0.8) 0%, rgba(219, 219, 219, 0) 60%);
+    background-attachment: fixed;
+    color: #ffffff;
+    font-family: 'Zalando Sans Expanded', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+    user-select: none;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Background spécifique McIntosh */
+body.mcintosh-bg {
+    background-image: radial-gradient(circle at center, rgba(21, 199, 223, 0.5) 0%, rgba(0, 0, 0, 0) 60%);
+}
+
+.release-version {
+    margin-top: 20px;
+    color: var(--mc-gold);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(120, 107, 70, 0.5);
+    display: inline-block; /* Permet à la div de rester sur la même ligne */
+    margin-left: 5px;
+}
+
+.release-version::after {
+    content: var(--release-number);
+    display: block;
+    margin-top: 20px;
+    color: var(--mc-gold);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-shadow: 0 0 10px rgba(120, 107, 70, 0.5);
+}
+
+/* ===========================
+   Layout Container System
+   =========================== */
+.container-fluid {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.row.g-4 > * {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.col-12 {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.col-md-6 {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* ===========================
+   Utilitaires Flex
+   =========================== */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gap-3 {
+    gap: 1rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+/* ===========================
+   Logos
+   =========================== */
+.logo-top {
+    width: var(--logo-width);
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 35px;
+    display: block;
+}
+
+.brand-logo { 
+    height: 18px; 
+    width: auto; 
+    opacity: 1; 
+    filter: grayscale(1); 
+    transform: translateY(-3px); 
+}
+
+/* ===========================
+   Liens et Navigation
+   =========================== */
+.custom-link {
+    color: var(--gold)!important;
+    text-decoration: none;
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s ease;
+    text-align: center;
+    display: block;
+}
+
+.custom-link:hover {
+    opacity: 1;
+    color: var(--gold) !important;
+}
+
+.links-container {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ===========================
+   Séparateurs
+   =========================== */
+
+.divider.mcintosh {
+    background: linear-gradient(to right, transparent, var(--mcintosh-blue), transparent);
+}
+
+/* ===========================
+   Typographie
+   =========================== */
+.text-block {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: 3px;
+    width: 100%;
+}
+
+.font-master {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 40px;
+    letter-spacing: 0px;
+    text-transform: none;
+    color: var(--gold);
+}
+
+.font-windows {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablettes et écrans moyens */
+@media (min-width: 768px) {
+    .col-md-6 {
+        width: 50%;
+    }
+    
+    .container-fluid {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Ajustements pour écrans moyens-larges */
+@media (max-width: 991px) {
+    :root {
+        --font-size-base: 28px;
+        --logo-width: 350px;
+    }
+}
+
+/* Ajustements pour tablettes */
+@media (max-width: 767px) {
+    :root {
+        --font-size-base: 24px;
+        --logo-width: 300px;
+    }
+    
+    .logo-top {
+        margin-bottom: 25px;
+        border-width: 4px;
+    }
+    
+    .col-12:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 576px) {
+    :root {
+        --font-size-base: 20px;
+        --logo-width: 250px;
+    }
+    
+    .logo-top {
+        margin-bottom: 20px;
+        border-width: 3px;
+    }
+    
+    .text-block {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+}

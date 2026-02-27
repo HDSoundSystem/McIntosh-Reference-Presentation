@@ -1,0 +1,22 @@
+{
+  "name": "Audio Players Collection",
+  "short_name": "Audio Players Collection",
+  "description": "Select your Audio Player",
+  "start_url": "https://hdsoundsystem.github.io/Player-Collection/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "img/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
